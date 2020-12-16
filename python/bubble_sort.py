@@ -6,6 +6,6 @@ def bubble_sort(list_sort):
         for i in range(len(list_sort) - num_of_iterations - 1):
             if list_sort[i] > list_sort[i+1]:
                 list_sort[i], list_sort[i+1] = list_sort[i+1], list_sort[i]
+                x= list_sort[i], list_sort[i+1]
                 has_swapped = True
         num_of_iterations += 1
-        return list_sort

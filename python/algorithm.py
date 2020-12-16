@@ -5,7 +5,7 @@ import argparse
 
 def list_length():
     parse = argparse.ArgumentParser()
-    parse.add_argument("-i", dest="length", help="Number of iterations")
+    parse.add_argument("-l", dest="length", help="Number of iterations")
     options= parse.parse_args()
     if not options.length:
         parse.error('>> Needs length of list.')
