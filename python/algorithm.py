@@ -13,16 +13,22 @@ def list_length():
     else:
         return options
 
+
 options=list_length()
-print('list length ' + options.length)
-sort = np.random.randint(100,size=(int(options.length)))
 
 try:
-    start=datetime.now()
-    bs.bubble_sort(sort)
-    stop=datetime.now()
-    duration= stop-start
-    print('Time taken to sort:', duration)
-except KeyboardInterrupt:
-    print('\nUser requested shut down')
+    length=int(options.length)
+    print('list length ' + options.length)
+    sort = np.random.randint(100,size=(length))
+    try:
+        start=datetime.now()
+        bs.bubble_sort(sort)
+        stop=datetime.now()
+        duration= stop-start
+        print('Time taken to sort:', duration)
+    except KeyboardInterrupt:
+        print('\nUser requested shut down')
+        sys.exit()
+except ValueError:
+    print('>> ERROR: Please enter a number')
     sys.exit()
